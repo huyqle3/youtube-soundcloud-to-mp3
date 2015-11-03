@@ -1,3 +1,25 @@
-#search{
-	margin-top: 10rem;
+body{
+	background-color: #1cbb9b;
+	font-family: sans-serif;
+	color: white;
 }
+
+.logo{
+	height: 90px;
+	margin: 0 auto;
+	margin-bottom: 1.5rem;
+}
+
+#search{
+	margin-top: 3rem;
+}
+
+.youtubepicker-panel{
+	margin: 0 auto;
+	margin-top: 1.75rem;
+}
+
+.youtubepicker-actions a{
+	border-radius: 3px;
+}
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AudioMax</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="AudioMax for YouTube and Soundcloud">
+	<meta name="author" content="AudioMax">
+	<link rel="shortcut icon" href="img/favicon.png">
+
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.8.6/css/nanoscroller.min.css">
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.8.6/javascripts/jquery.nanoscroller.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.youtubepicker.css">
+	<script type="text/javascript" src="js/jquery.youtubepicker.js"></script>
+
+    <!--font-Awesome-->
+	<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+	<!--font-Awesome-->
+</head>
+
+<body>
+	<div id="search" class="container">
+		<div class="text-center">
+			<form class="form-inline">
+				<div class="form-group">
+					<a href="index.html"><img class="logo img-responsive" src="img/logo.png"></a>
+					<input type="text" name="video" class="yp form-control" placeholder="Search a video">
+					<button class="btn btn-default"><i class="search-btn fa fa-search"></i></button>
+					<div class="empty"></div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="api.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			var credentials = { 
+				'API_KEY' : api.key
+			};
+			$('.yp').youtubepicker(credentials);
+		});
+	</script>
+</body>
+</html>
