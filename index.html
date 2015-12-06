@@ -13,15 +13,19 @@
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 
+	<!-- YouTube manipulation section -->
 	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.8.6/css/nanoscroller.min.css">
 	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.8.6/javascripts/jquery.nanoscroller.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/jquery.youtubepicker.css">
 	<script type="text/javascript" src="js/jquery.youtubepicker.js"></script>
 
-    <!--font-Awesome-->
+	<!-- Bootstrap toggle section -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-toggle.css">
+	<script type="text/javascript" src="js/bootstrap-toggle.js"></script>
+
+    <!--Font-Awesome-->
 	<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
-	<!--font-Awesome-->
 </head>
 
 <body>
@@ -36,6 +40,11 @@
 				</div>
 			</form>
 		</div>
+		<br>
+		<div class="text-center">
+			<input id="toggle-event" checked type="checkbox" data-toggle="toggle" data-on="YouTube" data-onstyle="danger" data-off="Soundcloud" data-offstyle="warning">
+		</div>
+		<div id="system"></div>
 	</div>
 
 	<script type="text/javascript" src="api.js"></script>
@@ -46,6 +55,14 @@
 				'API_KEY' : api.key
 			};
 			$('.yp').youtubepicker(credentials);
+		});
+
+		$(function(){
+			var test = false;
+			$('#toggle-event').change(function(){
+				test = true;
+				console.log(test);
+			});
 		});
 	</script>
 </body>

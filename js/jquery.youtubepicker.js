@@ -254,7 +254,8 @@
 			            if (0 < Data.ce && 0 < Data.sid) {
 			                document.location.href = 'http://' + s[Data.sid] + '.yt-downloader.org/download.php?id=' + Data.hash;
 			            } else {
-			                document.location.href = 'http://www.youtube2mp3.cc/api/#h|' + data.vid + '|' + Data.hash + '|' + data.title;
+			                // document.location.href = 'http://www.youtube2mp3.cc/api/#h|' + data.vid + '|' + Data.hash + '|' + data.title;
+			                // var downloadLink = checkProgress("https://d.yt-downloader.org/progress.php?id=" + Data.hash);
 			            }
 			        }
 			    });
@@ -263,6 +264,25 @@
 				// panel.hide();
 			});
 		};
+
+		function checkProgress(progressLink){
+			var sid = 0;
+			var progess = 0;
+			while(sid == 0 || progress != 3){
+				$.ajax({
+					url: progressLink,
+					dataType: 'jsonp',
+					success: function(deta){
+						console.log(data.progress);
+						$.each(data, function(name, value){
+							Data[Name] = (Name == 'hash') ? Value : parseInt(Value);
+						});
+						progress = Data.progress;
+					}
+				});
+			}
+		}
+
 		this.preview = function(panel){
 			var that = this;
 			var self = that.preview;
